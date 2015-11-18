@@ -80,6 +80,10 @@ Custom property               | Description                                    |
                 Polymer.PaperItemBehavior
             ],
 
+            hostAttributes: {
+                'role': 'menuitemradio'
+            },
+
             properties: {
                 /**
                  * If true, the button toggles the active state with each tap or press
@@ -89,7 +93,7 @@ Custom property               | Description                                    |
                     type: Boolean,
                     value: true,
                     reflectToAttribute: true
-                },
+                }
             }
         });
     </script>

@@ -13,22 +13,22 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 <link rel="import" href="../iron-behaviors/iron-button-state.html">
 <link rel="import" href="../iron-flex-layout/iron-flex-layout.html">
 <link rel="import" href="../paper-styles/typography.html">
-<link rel="import" href="../paper-checkbox/paper-checkbox.html">
+<link rel="import" href="../paper-radio-button/paper-radio-button.html">
 <link rel="import" href="paper-item-behavior.html">
 <link rel="import" href="paper-item-shared-styles.html">
 
 <!--
-`<paper-checkbox-item>` is a convenience element to make an item with icon. It is an interactive list
+`<paper-radio-item>` is a convenience element to make an item with icon. It is an interactive list
 item with a fixed-width icon area, according to Material Design. This is useful if the icons are of
 varying widths, but you want the item bodies to line up. Use this like a `<paper-item>`. The child
 node with the attribute `item-icon` is placed in the icon area.
 
-    <paper-checkbox-item>
+    <paper-radio-item>
       Favorite
-    </paper-checkbox-item>
-    <paper-checkbox-item>
+    </paper-radio-item>
+    <paper-radio-item>
       Avatar
-    </paper-checkbox-item>
+    </paper-radio-item>
 
 ### Styling
 
@@ -37,7 +37,7 @@ The following custom properties and mixins are available for styling:
 Custom property               | Description                                    | Default
 ------------------------------|------------------------------------------------|----------
 `--paper-item-icon-width`     | Width of the icon area                         | `56px`
-`--paper-checkbox-item`           | Mixin applied to the item                      | `{}`
+`--paper-radio-item`           | Mixin applied to the item                      | `{}`
 `--paper-item-selected-weight`| The font weight of a selected item             | `bold`
 `--paper-item-selected`       | Mixin applied to selected paper-items                | `{}`
 `--paper-item-disabled-color` | The color for disabled paper-items             | `--disabled-text-color`
@@ -46,7 +46,7 @@ Custom property               | Description                                    |
 `--paper-item-focused-before` | Mixin applied to :before focused paper-items | `{}`
 -->
 
-<dom-module id="paper-checkbox-item">
+<dom-module id="paper-radio-item">
     <template>
         <style include="paper-item-shared-styles"></style>
         <style>
@@ -56,7 +56,7 @@ Custom property               | Description                                    |
                 @apply(--paper-font-subhead);
 
                 @apply(--paper-item);
-                @apply(--paper-checkbox-item);
+                @apply(--paper-radio-item);
 
                 cursor: pointer;
             }
@@ -68,13 +68,13 @@ Custom property               | Description                                    |
             }
         </style>
 
-        <paper-checkbox active="{{active}}"></paper-checkbox>
+        <paper-radio-button active="{{active}}"></paper-radio-button>
         <content></content>
     </template>
 
     <script>
         Polymer({
-            is: 'paper-checkbox-item',
+            is: 'paper-radio-item',
 
             behaviors: [
                 Polymer.PaperItemBehavior

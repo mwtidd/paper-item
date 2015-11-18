@@ -28,7 +28,8 @@
     "paper-styles": "PolymerElements/paper-styles#^1.0.0",
     "iron-flex-layout": "PolymerElements/iron-flex-layout#^1.0.0",
     "iron-behaviors": "polymerelements/iron-behaviors#^1.0.0",
-    "paper-checkbox": "PolymerElements/paper-checkbox#~1.0.14"
+    "paper-checkbox": "PolymerElements/paper-checkbox#~1.0.14",
+    "paper-radio-button": "PolymerElements/paper-radio-button#~1.0.11"
   },
   "devDependencies": {
     "iron-component-page": "PolymerElements/iron-component-page#^1.0.0",

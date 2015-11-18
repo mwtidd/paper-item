@@ -1,0 +1,41 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+
+<link rel="import" href="../paper-item/paper-item.html">
+<link rel="import" href="../paper-item/paper-item-body.html">
+
+<dom-module id="paper-checkbox-item">
+
+    <template>
+        <paper-item role="menuitemcheckbox">
+            <paper-item-body active="{{active}}"><content></content></paper-item-body>
+            <paper-checkbox active="{{active}}"></paper-checkbox>
+        </paper-item>
+    </template>
+
+    <style is="custom-style">
+        :host {
+
+        }
+    </style>
+
+</dom-module>
+
+
+
+<script>
+    Polymer({
+        is: 'paper-checkbox-item',
+        listeners: {},
+        properties: {
+            /**
+             * If true, the button is a toggle and is currently in the active state.
+             */
+            active: {
+                type: Boolean,
+                value: false,
+                notify: true,
+                reflectToAttribute: true
+            }
+        }
+    });
+</script>
